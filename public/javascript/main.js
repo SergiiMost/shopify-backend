@@ -130,7 +130,7 @@ const UI = (() => {
             const tag = document.querySelector(`#tag-${checkbox.id}`)
             tag.className = 'tag-public'
             tag.innerHTML = 'public'
-            document.querySelector(`#${checkbox.id}`).checked = 'false'
+            document.querySelector(`#${checkbox.id}`).checked = false
           }
         })
       })
