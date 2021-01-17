@@ -1,0 +1,7 @@
+## Backend Developer Intern (Remote) - Summer 2021
+
+Short presentation of the project on YouTube:<br />
+https://youtu.be/QEa3fWHDia0
+
+Deployed to Heroku:<br />
+https://shopify-backend-images.herokuapp.com/
