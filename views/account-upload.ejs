@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+    <title>Image Repository: Account</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/account.css" />
+  </head>
+  <body>
+    <div class="pageWrapper">
+      <%- include('partials/navbar')%>
+      <main class="main">
+        <div class="mainContentWrapper">
+          <div class="actionBar">
+            <div class="actionBarWrapper">
+              <div class="actionBarLinksWrapper">
+                <a href="/account" class="actionLink">Images</a>
+                /
+                <a href="/account/upload" class="actionLink">Upload</a>
+              </div>
+              <div>Welcome, <%= userName %></div>
+            </div>
+          </div>
+          <div class="formWrapper">
+            <h1 class="formHeader">Upload Images</h1>
+            <form class="form" id="form">
+              <div class="formInputWrapper">
+                <p class="mb-05">Permission:</p>
+                <div class="mb-05">
+                  <input type="radio" id="private" name="permission" value="private" checked />
+                  <label for="private">Private</label>
+                </div>
+                <div>
+                  <input type="radio" id="public" name="permission" value="public" />
+                  <label for="public">Public</label>
+                </div>
+              </div>
+              <div class="formInputWrapper">
+                <label for="formTags" class="mb-05 d-block">Comma separated tags (up to 3) :</label>
+                <input type="text" id="formTags" class="formTags" required />
+              </div>
+              <input type="file" id="fileInput" name="fileInput" multiple required />
+              <div class="formInputWrapper formButtonWrapper">
+                <button type="submit" class="button button-blue" id="btn-upload">Upload</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <%- include('partials/footer')%>
+    </div>
+    <script src="/javascript/main.js"></script>
+  </body>
+</html>

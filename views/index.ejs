@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+    <title>Image Repository</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+  </head>
+  <body>
+    <div class="pageWrapper">
+      <%- include('partials/navbar')%>
+      <main class="main">
+        <div class="mainContentWrapper">
+          <div class="imagesContainer">
+            <%if(documents.length>0){%> <%documents.forEach(function(document){%>
+            <div class="imageCard">
+              <div class="imageWrapper">
+                <img src="/image/load-image/<%=document.image%>" alt="image" class="image" />
+              </div>
+              <div class="imageDataWrapper">
+                <p class="mb-05"><span class="imageTextLight"> User:</span> <span><%=document.userName%></span></p>
+                <p>
+                  <span class="imageTextLight"> Tags: </span>
+                  <%document.tags.forEach((tag)=>{%>
+                  <span class="tag"><%=tag%></span>
+                  <%})%>
+                </p>
+              </div>
+            </div>
+            <%})%> <%}%>
+          </div>
+        </div>
+      </main>
+      <%- include('partials/footer')%>
+    </div>
+    <script src="/javascript/main.js"></script>
+  </body>
+</html>

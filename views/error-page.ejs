@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+    <title>Image Repository: Error page</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/error.css" />
+  </head>
+  <body>
+    <div class="pageWrapper">
+      <%- include('partials/navbar')%>
+      <main class="main">
+        <div class="errorWrapper">
+          <div>
+            <img src="/svg/error.svg" alt="error image" class="image" />
+          </div>
+          <h1 class="errorMessage">Something went wrong ...</h1>
+        </div>
+      </main>
+      <%- include('partials/footer')%>
+    </div>
+    <script src="/javascript/main.js"></script>
+  </body>
+</html>

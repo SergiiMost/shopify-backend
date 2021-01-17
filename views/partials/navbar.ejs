@@ -1,0 +1,47 @@
+<header>
+  <nav class="nav">
+    <div class="navContentWrapper">
+      <a href="/" class="logo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#3b7cfc"
+          class="bi bi-image-alt"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M7 2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zm4.225 4.053a.5.5 0 0 0-.577.093l-3.71 4.71-2.66-2.772a.5.5 0 0 0-.63.062L.002 13v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4.5l-4.777-3.947z"
+          />
+        </svg>
+        <span>Image Repository</span>
+      </a>
+      <% if (!loggedIn) { %>
+      <a href="/log-in">
+        <span> Log In </span>
+      </a>
+      <% } else { %>
+      <div class="navIconWrapper">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="navIcon"
+          viewBox="0 0 16 16"
+        >
+          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+          <path
+            fill-rule="evenodd"
+            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+          />
+        </svg>
+        <div class="navLinksWrapper">
+          <a href="/account" class="navLink">Account</a>
+          <a href="/log-out" class="navLink">Log out</a>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </nav>
+</header>

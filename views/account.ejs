@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+    <title>Image Repository: Account</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/account.css" />
+  </head>
+  <body>
+    <div class="pageWrapper">
+      <%- include('partials/navbar')%>
+      <main class="main">
+        <div class="mainContentWrapper">
+          <div class="actionBar">
+            <div class="actionBarWrapper">
+              <div class="actionBarLinksWrapper">
+                <a href="/account" class="actionLink">Images</a>
+                /
+                <a href="/account/upload" class="actionLink">Upload</a>
+              </div>
+              <div>Welcome, <%= userName %></div>
+            </div>
+          </div>
+          <div class="controlsWrapper">
+            <button class="button button-magenta" id="btn-setPrivate">Set Private</button>
+            <button class="button button-green ml-1" id="btn-setPublic">Set Public</button>
+            <button class="button button-red ml-3" id="btn-delete">Delete</button>
+          </div>
+          <div class="imagesWrapper">
+            <div class="imagesContainer">
+              <%if(documents.length>0){%> <%documents.forEach(function(document){%>
+              <div class="imageCard" id="card-<%=document.id%>">
+                <div class="imageWrapper">
+                  <img src="/image/load-image/<%=document.image%>" alt="image" class="image" />
+                </div>
+                <div class="imageDataWrapper">
+                  <p class="mb-05"><span class="imageTextLight"> User:</span> <span><%=document.userName%></span></p>
+                  <p class="mb-05">
+                    <span class="imageTextLight"> Tags: </span>
+                    <%document.tags.forEach((tag)=>{%>
+                    <span class="tag"><%=tag%></span>
+                    <%})%>
+                  </p>
+                  <p>
+                    <span class="imageTextLight">Permission: </span>
+                    <span class="tag-<%=document.permission%>" id="tag-<%=document.id%>"><%=document.permission%></span>
+                  </p>
+                  <div class="imageCheckboxContainer">
+                    <div class="imageCheckboxWrapper">
+                      <input type="checkbox" id="<%=document.id%>" class="imageCheckbox" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <%})%> <%}%>
+            </div>
+          </div>
+        </div>
+      </main>
+      <%- include('partials/footer')%>
+    </div>
+    <script src="/javascript/main.js"></script>
+  </body>
+</html>

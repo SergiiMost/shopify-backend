@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+}
+
+.errorWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.errorMessage {
+  font-weight: 500;
+}
+
+.image {
+  width: 100%;
+}
