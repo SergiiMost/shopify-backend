@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
 })
 
 router.get('/github', function (req, res, next) {
-  const redirect_uri = 'http://localhost:3000/github/callback'
+  const redirect_uri = 'https://shopify-backend-images.herokuapp.com/github/callback'
   res.redirect(
     `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}&redirect_uri=${redirect_uri}&scope=read:user`
   )
