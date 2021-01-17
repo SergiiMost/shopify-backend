@@ -35,7 +35,6 @@ router.get('/', async function (req, res, next) {
     const access_token = await getAccessToken(code, process.env.GITHUB_CLIENT_ID, process.env.GITHUB_CLIENT_SECRET)
     const user = await fetchGitHubUser(access_token)
     if (user) {
-      console.log(user)
       req.session.githubId = user.id
       req.session.userName = user.login
       res.redirect('/account')

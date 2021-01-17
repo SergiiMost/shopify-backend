@@ -24,13 +24,11 @@ const UI = (() => {
         if (selectedImages) {
           selectedImages.remove()
         }
-        console.log(files)
         const imagesDiv = document.createElement('div')
         imagesDiv.className = 'selectedImages'
 
         for (let i = 0, numFiles = files.length; i < numFiles; i++) {
           const file = files[i]
-          console.log(file.name)
           const image = document.createElement('span')
           image.innerHTML = `${file.name}`
           imagesDiv.append(image)

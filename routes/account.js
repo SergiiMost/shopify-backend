@@ -14,7 +14,6 @@ const storage = new GridFsStorage({
     const filename = file.originalname
     const name = filename.slice(0, filename.lastIndexOf('.'))
     const type = filename.slice(filename.lastIndexOf('.'))
-    console.log(file)
     return {
       filename: `${name}-${nanoid(4)}${type}`,
     }
