@@ -7,7 +7,6 @@ const dotenv = require('dotenv')
 const cookieSession = require('cookie-session')
 
 const indexRouter = require('./routes/index')
-const usersRouter = require('./routes/users')
 const logInRouter = require('./routes/log-in')
 const githubCallbackRouter = require('./routes/github-callback')
 const errorRouter = require('./routes/error')
@@ -35,7 +34,6 @@ app.use(
 )
 
 app.use('/', indexRouter)
-app.use('/users', usersRouter)
 app.use('/log-in', logInRouter)
 app.use('/github/callback', githubCallbackRouter)
 app.use('/error-page', errorRouter)
