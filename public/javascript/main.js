@@ -68,7 +68,7 @@ const UI = (() => {
             FD.append('tags', tagsArray)
 
             XHR.addEventListener('load', function (event) {
-              alert(`File ${input.files[i]} uploaded !`)
+              alert(`File uploaded !`)
             })
             // Define what happens in case of error
             XHR.addEventListener(' error', function (event) {
