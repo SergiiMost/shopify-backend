@@ -72,7 +72,7 @@ const UI = (() => {
               alert('Oops! Something went wrong.')
             })
 
-            XHR.open('POST', 'http://localhost:3000/account/upload')
+            XHR.open('POST', 'https://shopify-backend-images.herokuapp.com/account/upload')
             XHR.send(FD)
           }
           document.querySelector('#formTags').value = ''
